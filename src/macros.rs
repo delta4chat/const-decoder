@@ -60,17 +60,17 @@ macro_rules! decode {
 /// decode base64 encoded data.
 #[macro_export]
 macro_rules! decode_base64 {
-    ($bytes:expr $(,)?) => {{
-        $crate::decode!($crate::Decoder::Base64, $bytes);
-    }};
+    ($bytes:expr $(,)?) => {
+        $crate::decode!($crate::Decoder::Base64, $bytes)
+    };
 }
 
 /// decode base64url encoded data.
 #[macro_export]
 macro_rules! decode_base64_url {
-    ($bytes:expr $(,)?) => {{
-        $crate::decode!($crate::Decoder::Base64Url, $bytes);
-    }};
+    ($bytes:expr $(,)?) => {
+        $crate::decode!($crate::Decoder::Base64Url, $bytes)
+    };
 }
 
 /// It conforms to [RFC4648](https://tools.ietf.org/html/rfc4648).
@@ -78,9 +78,9 @@ macro_rules! decode_base64_url {
 /// from: <https://docs.rs/data-encoding/2.6.0/data_encoding/constant.BASE32.html>
 #[macro_export]
 macro_rules! decode_base32 {
-    ($bytes:expr $(,)?) => {{
-        $crate::decode!($crate::Decoder::custom("ABCDEFGHIJKLMNOPQRSTUVWXYZ234567"), $bytes);
-    }};
+    ($bytes:expr $(,)?) => {
+        $crate::decode!($crate::Decoder::custom("ABCDEFGHIJKLMNOPQRSTUVWXYZ234567"), $bytes)
+    };
 }
 
 /// It conforms to [RFC4648](https://tools.ietf.org/html/rfc4648).
@@ -88,9 +88,9 @@ macro_rules! decode_base32 {
 /// from: <https://docs.rs/data-encoding/2.6.0/data_encoding/constant.BASE32HEX.html>
 #[macro_export]
 macro_rules! decode_base32_hex {
-    ($bytes:expr $(,)?) => {{
-        $crate::decode!($crate::Decoder::custom("0123456789ABCDEFGHIJKLMNOPQRSTUV"), $bytes);
-    }};
+    ($bytes:expr $(,)?) => {
+        $crate::decode!($crate::Decoder::custom("0123456789ABCDEFGHIJKLMNOPQRSTUV"), $bytes)
+    };
 }
 
 /// It conforms to [RFC5155](https://tools.ietf.org/html/rfc5155):
@@ -101,9 +101,9 @@ macro_rules! decode_base32_hex {
 /// from: <https://docs.rs/data-encoding/2.6.0/data_encoding/constant.BASE32_DNSSEC.html>
 #[macro_export]
 macro_rules! decode_base32_dnssec {
-    ($bytes:expr $(,)?) => {{
-        $crate::decode!($crate::Decoder::custom("0123456789abcdefghijklmnopqrstuv"), $bytes);
-    }};
+    ($bytes:expr $(,)?) => {
+        $crate::decode!($crate::Decoder::custom("0123456789abcdefghijklmnopqrstuv"), $bytes)
+    };
 }
 
 /// It conforms to [DNSCurve](https://dnscurve.org/in-implement.html).
@@ -111,9 +111,9 @@ macro_rules! decode_base32_dnssec {
 /// from: <https://docs.rs/data-encoding/2.6.0/data_encoding/constant.BASE32_DNSCURVE.html>
 #[macro_export]
 macro_rules! decode_base32_dnscurve {
-    ($bytes:expr $(,)?) => {{
-        $crate::decode!($crate::Decoder::custom("0123456789bcdfghjklmnpqrstuvwxyz"), $bytes);
-    }};
+    ($bytes:expr $(,)?) => {
+        $crate::decode!($crate::Decoder::custom("0123456789bcdfghjklmnpqrstuvwxyz"), $bytes)
+    };
 }
 
 #[derive(Debug)]

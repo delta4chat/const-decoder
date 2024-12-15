@@ -1,6 +1,6 @@
 [package]
 name = "const-decoder2"
-version = "0.5.0"
+version = "0.5.1"
 authors = ["Alex Ostrovski <ostrovski.alex@gmail.com>", "Delta 4 <156182500+delta4chat@users.noreply.github.com>"]
 edition = "2021"
 rust-version = "1.67"
